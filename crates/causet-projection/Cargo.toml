@@ -1,0 +1,29 @@
+[package]
+name = "causet-projection"
+description = "Causet projections of an ordered log of records into derived facts: warm-up after a restart, and checks of restart equivalence and of incremental against from-scratch."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+documentation.workspace = true
+rust-version.workspace = true
+keywords = ["projection", "event-log", "incremental", "observability", "causet"]
+categories = ["data-structures"]
+publish.workspace = true
+
+[features]
+# `LogEntry` for `causet_reporting::Record`, to process reports as
+# they are.
+reporting = ["dep:causet-reporting"]
+
+[dependencies]
+causet-reporting = { workspace = true, optional = true }
+
+[dev-dependencies]
+# The tests generate logs and restart points, and shrink failures.
+causet-test.workspace = true
+
+[lints]
+workspace = true

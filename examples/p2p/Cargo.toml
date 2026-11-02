@@ -1,0 +1,10 @@
+[package]
+name = "p2p"
+description = "A reusable peer-to-peer RPC component on causet: connections with generations, one outbound request per peer, bounded inbound requests with exact identities, generic over its messages."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish = false
+
+[dependencies]
+causet.workspace = true

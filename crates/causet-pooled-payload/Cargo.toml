@@ -1,0 +1,22 @@
+[package]
+name = "causet-pooled-payload"
+description = "Pool-backed structured record payloads with a custom JSON writer."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+documentation.workspace = true
+rust-version.workspace = true
+keywords = ["json", "logging", "payload", "pool", "causet"]
+categories = ["encoding"]
+publish.workspace = true
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+smallvec.workspace = true
+
+[lints]
+workspace = true

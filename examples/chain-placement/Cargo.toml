@@ -1,0 +1,13 @@
+[package]
+name = "chain-placement"
+description = "Where each produced block landed, from late and out-of-order node reports: a projection on causet, checked across restarts."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish = false
+
+[dependencies]
+causet.workspace = true
+
+[dev-dependencies]
+causet-test.workspace = true

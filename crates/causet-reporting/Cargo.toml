@@ -1,0 +1,36 @@
+[package]
+name = "causet-reporting"
+description = "Causet's reporting pipeline: dedupe, rate limits, sampling, metric aggregation, dumps, context trails."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+documentation.workspace = true
+rust-version.workspace = true
+keywords = ["observability", "reporting", "metrics", "rate-limit", "causet"]
+categories = ["development-tools::debugging"]
+publish.workspace = true
+
+[dependencies]
+blake3.workspace = true
+causet-pooled-payload.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+static_assertions.workspace = true
+
+[dev-dependencies]
+# The example wires the pipeline into a Store as a Service.
+causet.workspace = true
+
+[[example]]
+name = "reporting"
+test = true
+
+[[bench]]
+name = "accept"
+harness = false
+
+[lints]
+workspace = true

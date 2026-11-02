@@ -1,0 +1,49 @@
+[workspace]
+resolver = "2"
+members = ["crates/causet", "crates/causet-core", "crates/causet-derive", "crates/causet-reporting", "crates/causet-observers", "crates/causet-pooled-payload", "crates/causet-projection", "crates/causet-test", "examples/wallet-send", "examples/chain-placement", "examples/p2p", "examples/p2p-node"]
+
+# The examples' generated tests run thousands of logs and replays; their
+# own code is optimized even in test builds.
+[profile.dev.package.chain-placement]
+opt-level = 2
+
+[profile.dev.package.causet-projection]
+opt-level = 2
+
+[workspace.package]
+version = "0.0.0"
+edition = "2024"
+rust-version = "1.90"
+license = "Apache-2.0"
+authors = ["Bruno Deferrari <utizoc@gmail.com>"]
+repository = "https://github.com/tizoc/causet.rs"
+homepage = "https://tizoc.github.io/causet/"
+documentation = "https://tizoc.github.io/causet/"
+# Source-only until the first registry release.
+publish = false
+
+# Every public item is documented.
+[workspace.lints.rust]
+missing_docs = "warn"
+
+# The internal crates' version must match the workspace version above.
+[workspace.dependencies]
+causet = { path = "crates/causet", version = "=0.0.0" }
+causet-core = { path = "crates/causet-core", version = "=0.0.0" }
+causet-derive = { path = "crates/causet-derive", version = "=0.0.0" }
+causet-reporting = { path = "crates/causet-reporting", version = "=0.0.0" }
+causet-observers = { path = "crates/causet-observers", version = "=0.0.0" }
+causet-pooled-payload = { path = "crates/causet-pooled-payload", version = "=0.0.0" }
+causet-projection = { path = "crates/causet-projection", version = "=0.0.0" }
+causet-test = { path = "crates/causet-test", version = "=0.0.0" }
+proc-macro2 = "1.0.106"
+quote = "1.0.46"
+blake3 = "1.8.4"
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.150"
+smallvec = "1.15.2"
+static_assertions = "1.1.0"
+syn = { version = "2.0.119", features = ["full"] }
+tracing = { version = "0.1.44", default-features = false, features = ["std"] }
+xxhash-rust = { version = "0.8.19", features = ["xxh3"] }
+web-time = "1.1.0"

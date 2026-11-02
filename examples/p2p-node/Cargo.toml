@@ -1,0 +1,14 @@
+[package]
+name = "p2p-node"
+description = "A node mounting the reusable p2p component: its policy, the routes and reply tokens it owns, and two consumers."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish = false
+
+[dependencies]
+causet.workspace = true
+p2p = { path = "../p2p" }
+
+[dev-dependencies]
+causet-test.workspace = true

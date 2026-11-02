@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 30" width="100" height="30" role="img" aria-label="causet">
+  <title>causet</title>
+  <g fill="none" stroke="#0a0a0a" stroke-width="2.2" stroke-linecap="round">
+    <path d="M10 24 A8 8 0 0 1 26 24"/>
+    <path d="M10 24 A16 16 0 0 1 42 24"/>
+    <path d="M42 24 A8 8 0 0 1 58 24"/>
+    <path d="M42 24 A16 16 0 0 1 74 24"/>
+    <path d="M74 24 A8 8 0 0 1 90 24"/>
+  </g>
+  <g fill="#0a0a0a">
+    <circle cx="10" cy="24" r="3.2"/>
+    <circle cx="26" cy="24" r="3.2"/>
+    <circle cx="42" cy="24" r="3.2"/>
+    <circle cx="58" cy="24" r="3.2"/>
+    <circle cx="74" cy="24" r="3.2"/>
+    <circle cx="90" cy="24" r="3.2"/>
+  </g>
+</svg>

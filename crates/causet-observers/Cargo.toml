@@ -1,0 +1,22 @@
+[package]
+name = "causet-observers"
+description = "Causet observers: tracing logs and execution statistics."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+documentation.workspace = true
+rust-version.workspace = true
+keywords = ["observability", "tracing", "logging", "statistics", "causet"]
+categories = ["development-tools::debugging"]
+publish.workspace = true
+
+[dependencies]
+causet-core.workspace = true
+serde.workspace = true
+tracing.workspace = true
+
+[lints]
+workspace = true

@@ -1,0 +1,24 @@
+[package]
+name = "causet-test"
+description = "Testing and simulation on the real causet Store: held Events, simulated time, invariants per node and across nodes, seeded scenarios, and generated runs shrunk to small repeatable cases."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+documentation.workspace = true
+rust-version.workspace = true
+keywords = ["deterministic", "simulation", "testing", "shrinking", "causet"]
+categories = ["development-tools::testing", "simulation"]
+publish.workspace = true
+
+[dependencies]
+causet-core.workspace = true
+
+[dev-dependencies]
+# The acceptance scenario declares its messages with the derives.
+causet = { path = "../causet" }
+
+[lints]
+workspace = true

@@ -1,0 +1,27 @@
+[package]
+name = "causet-core"
+description = "The causet kernel: components, the scheduler, contexts, the Event bus, the clock, observers, invariants and bug reports."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+documentation.workspace = true
+rust-version.workspace = true
+keywords = ["state-machine", "deterministic", "simulation", "effects", "scheduler"]
+categories = ["simulation"]
+publish.workspace = true
+
+[features]
+# Serialize and Deserialize for the identity types (RequestId, ExecutionId,
+# ...), for applications that serialize the State holding them.
+serde = ["dep:serde"]
+
+[dependencies]
+serde = { workspace = true, optional = true }
+xxhash-rust.workspace = true
+web-time.workspace = true
+
+[lints]
+workspace = true

@@ -1,0 +1,15 @@
+[package]
+name = "wallet-send"
+description = "A wallet send on a light node, on causet: paged input discovery, stale-result pins, retries, asynchronous proving, and hydration from full peers with Merkle proofs."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish = false
+
+[dependencies]
+causet = { workspace = true, features = ["serde"] }
+serde.workspace = true
+
+[dev-dependencies]
+causet-test.workspace = true
+serde_json.workspace = true

@@ -1,0 +1,55 @@
+[package]
+name = "causet"
+description = "A framework for event-driven systems as composable state machines, with deterministic simulation built in."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+documentation.workspace = true
+rust-version.workspace = true
+keywords = ["state-machine", "deterministic", "simulation", "effects", "testing"]
+categories = ["simulation", "development-tools::testing"]
+publish.workspace = true
+readme = "README.md"
+
+[features]
+# Serialize and Deserialize for causet's identity types.
+serde = ["causet-core/serde"]
+
+[dependencies]
+causet-core.workspace = true
+causet-derive.workspace = true
+causet-observers.workspace = true
+causet-projection.workspace = true
+
+[dev-dependencies]
+# The guide's examples: testing, and reporting on its observability page.
+causet-test.workspace = true
+causet-reporting.workspace = true
+serde.workspace = true
+tracing.workspace = true
+static_assertions.workspace = true
+
+[target.'cfg(all(target_family = "wasm", target_os = "unknown"))'.dev-dependencies]
+wasm-bindgen-test = "=0.3.79"
+
+[[bench]]
+name = "baseline"
+harness = false
+
+[[example]]
+name = "downloads"
+test = true
+
+[[example]]
+name = "composite"
+test = true
+
+[[example]]
+name = "shop"
+test = true
+
+[lints]
+workspace = true

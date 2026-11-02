@@ -1,0 +1,4 @@
+/target/
+.DS_Store
+# Local scratchpads: the design record, drafts and benchmark notes. Never committed.
+/local/
